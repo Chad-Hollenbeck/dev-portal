@@ -1,0 +1,257 @@
+<h4 class="font-weight-bold py-3 mb-4"> User Details</h4>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item"><a [routerLink]="[userListRoute]">Users</a></li>
+  <li class="breadcrumb-item"
+      *ngIf="userData.id"><a [routerLink]="[userListRoute,userData?.id]">{{userData?.name}}</a></li>
+  <li class="breadcrumb-item active"
+      *ngIf="!userData.id">New</li>
+</ol>
+
+<ngb-tabset class="nav-tabs-top">
+  <ngb-tab title="Details">
+    <ng-template ngbTabContent>
+      <form class=""
+            [formGroup]="userForm"
+            (ngSubmit)="onSubmit()"
+            *ngIf="userForm">
+
+        <div class="card-body"
+             *ngIf="userData?.photoURL">
+
+          <div class="media align-items-center">
+            <img src="{{userData?.photoURL}}"
+                 alt=""
+                 class="d-block ui-w-80">
+            <div class="media-body ml-3">
+              <!-- <label class="form-label d-block mb-2">Avatar</label>
+        <button type="button" class="btn btn-outline-primary btn-sm">Change</button>&nbsp;
+        <button type="button" class="btn btn-default btn-sm md-btn-flat">Reset</button> -->
+            </div>
+          </div>
+        </div>
+        <hr class="border-light m-0">
+        <div class="card-body pb-2">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input formControlName="name"
+                   type="text"
+                   class="form-control">
+          </div>
+          <div class="form-group">
+            <label class="form-label">E-mail</label>
+            <input formControlName="email"
+                   type="text"
+                   (change)="disableSubmit = false;"
+                   class="form-control mb-1">
+            <!-- <a href="javascript:void(0)" class="small">Resend confirmation</a> -->
+          </div>
+          <div class="row">
+
+            <div class="form-group col-md-3">
+              <span class="form-label">Active</span>
+              <label class="switcher switcher-lg switcher-success d-block mt-2">
+                <input [value]="isActive"
+                       class="switcher-input"
+                       type="checkbox"
+                       formControlName="isActive">
+                <span class="switcher-indicator">
+                  <span class="switcher-yes">
+                    <span class="fas fa-check"></span>
+                  </span>
+                  <span class="switcher-no">
+                    <span class="fas fa-times"></span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="form-group col-md-3">
+              <span class="form-label">Owl Employee</span>
+              <label class="switcher switcher-lg switcher-success d-block mt-2">
+                <input [value]="isEmloyee"
+                       class="switcher-input"
+                       type="checkbox"
+                       formControlName="isEmployee">
+                <span class="switcher-indicator">
+                  <span class="switcher-yes">
+                    <span class="fas fa-check"></span>
+                  </span>
+                  <span class="switcher-no">
+                    <span class="fas fa-times"></span>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+        <hr class="border-light m-0">
+        <div class="table-responsive"
+             *ngIf="userData && userData.roles"
+             formGroupName="roles">
+          <table class="table card-table m-0">
+            <tbody>
+              <tr>
+                <th>Role</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>DOOR-ACCESS-24-7</td>
+                <td>
+                  <label class="switcher switcher-lg switcher-success d-block mt-2">
+                    <input checked=""
+                           class="switcher-input"
+                           type="checkbox"
+                           formControlName="DOOR-ACCESS-24-7">
+                    <span class="switcher-indicator">
+                      <span class="switcher-yes">
+                        <span class="fas fa-check"></span>
+                      </span>
+                      <span class="switcher-no">
+                        <span class="fas fa-times"></span>
+                      </span>
+                    </span>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td>OWL-ADMIN</td>
+                <td>
+                  <label class="switcher switcher-lg switcher-success d-block mt-2">
+                    <input checked=""
+                           class="switcher-input"
+                           type="checkbox"
+                           formControlName="OWL-ADMIN">
+                    <span class="switcher-indicator">
+                      <span class="switcher-yes">
+                        <span class="fas fa-check"></span>
+                      </span>
+                      <span class="switcher-no">
+                        <span class="fas fa-times"></span>
+                      </span>
+                    </span>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td>TIME-ENTRY-APPROVER</td>
+                <td>
+                  <label class="switcher switcher-lg switcher-success d-block mt-2">
+                    <input checked=""
+                           class="switcher-input"
+                           type="checkbox"
+                           formControlName="TIME-ENTRY-APPROVER">
+                    <span class="switcher-indicator">
+                      <span class="switcher-yes">
+                        <span class="fas fa-check"></span>
+                      </span>
+                      <span class="switcher-no">
+                        <span class="fas fa-times"></span>
+                      </span>
+                    </span>
+                  </label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text-right m-3">
+          <button type="submit"
+                  data-style="slide-left"
+                  class="btn btn-primary"
+                  [disabled]="userForm.invalid || userForm.pristine || disableSubmit"> Save Changes </button>
+          <button type="button"
+                  (click)="resetForm()"
+                  class="btn btn-default">Cancel</button>
+        </div>
+      </form>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Rates">
+    <ng-template ngbTabContent>
+      <form class=""
+            [formGroup]="userRateForm"
+            (ngSubmit)="onRateSubmit()"
+            *ngIf="userRateForm">
+        <div class="table-responsive min-h-50">
+          <div class="card mt-1">
+            <div class="card-body">
+              <small class="text-muted">Employee rates are saved to time entry transactions for historical accuracy.</small>
+            </div>
+          </div>
+          <table class="table card-table mt-2">
+            <thead>
+              <tr>
+                <th>Start Date</th>
+                <th>Rate</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let rate of userRates; let i = index;">
+                <td class="bg-muted">{{rate.startDate | date: 'MM/dd/yyyy'}}</td>
+                <td class="bg-muted">{{rate.amount | currency}}</td>
+                <td class="bg-muted">
+                  <button type="button"
+                          class="btn btn-default"
+                          mwlConfirmationPopover
+                          popoverTitle="Are you sure?"
+                          popoverMessage="This is a permanent operation"
+                          placement="bottom"
+                          confirmButtonType="danger"
+                          (confirm)="removeRate(rate.uid)"
+                          (cancel)="cancel()"> Remove </button>
+                </td>
+              </tr>
+              <tr *ngIf="userRates.length == 0">
+                <td colspan="3">
+                  <h3 class="text-muted text-center">No Rates Defined</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- Date Picker -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control"
+                             placeholder="New Rate Start Date"
+                             name="dp"
+                             dateFormat="MM/dd/yyyy"
+                             formControlName="startDate"
+                             ngbDatepicker
+                             [displayMonths]="1"
+                             [navigation]="true"
+                             [disabled]="false"
+                             [placement]="isRTL ? 'bottom-right' : 'bottom-left'"
+                             #d="ngbDatepicker">
+                      <div class="input-group-append">
+                        <button class="input-group-text"
+                                [disabled]="false"
+                                (click)="d.toggle()"
+                                type="button">
+                          <span class="far fa-calendar"
+                                style="cursor: pointer;"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td><input type="number"
+                         name="amount"
+                         placeholder="New Rate Hourly Amount"
+                         class="form-control"
+                         formControlName="amount"></td>
+                <td>
+                  <!-- Add Button -->
+                  <button type="submit"
+                          class="btn btn-outline-primary"
+                          name="button"
+                          [disabled]="userRateForm.invalid || userRateForm.pristine">Add Rate</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

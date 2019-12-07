@@ -1,0 +1,152 @@
+<h4 class="d-flex justify-content-between align-items-center w-100 font-weight-bold py-3 mb-4">
+  <div>Users</div>
+  <a [routerLink]="[detailsRoute, 'new']"
+     class="btn btn-primary rounded-pill d-block"><span class="fas fa-plus"></span>&nbsp; Create user</a>
+</h4>
+
+<!-- Filters -->
+<!-- <div class="ui-bordered px-4 pt-4 mb-4">
+  <div class="form-row align-items-center">
+    <div class="col-md mb-4">
+      <label class="form-label">Verified</label>
+      <select class="custom-select" [(ngModel)]="filterVerified">
+        <option *ngFor="let item of ['Any', 'Yes', 'No']" [value]="item">{{item}}</option>
+      </select>
+    </div>
+    <div class="col-md mb-4">
+      <label class="form-label">Role</label>
+      <select class="custom-select" [(ngModel)]="filterRole">
+        <option *ngFor="let item of ['Any', 'OWL-ADMIN', 'OWL-EMPLOYEE', 'TIME-ENTRY-APPROVER', 'DOOR-ACCESS-24-7']" [value]="item">{{item}}</option>
+      </select>
+    </div>
+    <div class="col-md mb-4">
+      <label class="form-label">Status</label>
+      <select class="custom-select" [(ngModel)]="filterStatus">
+        <option *ngFor="let item of ['Any', 'Active', 'D']" [value]="item">{{item}}</option>
+      </select>
+    </div>
+    <div class="col-md col-xl-2 mb-4">
+      <label class="form-label d-none d-md-block">&nbsp;</label>
+      <button type="button" class="btn btn-secondary btn-block">Show</button>
+    </div>
+  </div>
+</div> -->
+<!-- / Filters -->
+
+<div class="card">
+
+  <!-- Table controls -->
+  <div class="card-body">
+
+    <div class="row">
+      <div class="col">
+        Per page: &nbsp;
+        <select [(ngModel)]="perPage"
+                (change)="update()"
+                class="custom-select custom-select-sm d-inline-block w-auto">
+          <option *ngFor="let limit of [10,20,30,40,50]">{{limit}}</option>
+        </select>
+      </div>
+      <div class="col">
+        <input type="text"
+               [(ngModel)]="filterVal"
+               (input)="currentPage = 1; update()"
+               class="form-control form-control-sm d-inline-block w-auto float-sm-right"
+               placeholder="Search...">
+      </div>
+    </div>
+
+  </div>
+  <!-- / Table controls -->
+
+  <!-- Table -->
+  <hr class="border-light m-0">
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered card-table">
+      <thead>
+        <tr>
+          <th class="text-nowrap text-center">&nbsp;
+          </th>
+
+          <th class="text-nowrap cursor-pointer"
+              (click)="setSort('name')">
+            Name<i class="fas text-muted ml-2"
+               *ngIf="sortBy=='name'"
+               [ngClass]="'fa-sort-' + (sortDesc ? 'down' : 'up')"></i>
+          </th>
+          <th class="text-nowrap cursor-pointer"
+              (click)="setSort('email')">
+            Email<i class="fas text-muted ml-2"
+               *ngIf="sortBy=='email'"
+               [ngClass]="'fa-sort-' + (sortDesc ? 'down' : 'up')"></i>
+          </th>
+          <th class="text-nowrap cursor-pointer"
+              (click)="setSort('lastLoginTimestamp')">
+            Last login
+            <i class="fas text-muted ml-2"
+               *ngIf="sortBy=='lastLoginTimestamp'"
+               [ngClass]="'fa-sort-' + (sortDesc ? 'down' : 'up')"></i>
+          </th>
+          <th class="text-nowrap cursor-pointer">
+            Role
+          </th>
+          <th class="text-nowrap cursor-pointer"
+              (click)="setSort('isActive')">
+            Status
+            <i class="fas text-muted ml-2"
+               *ngIf="sortBy=='isActive'"
+               [ngClass]="'fa-sort-' + (sortDesc ? 'down' : 'up')"></i>
+          </th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of usersData">
+          <td class="align-middle">
+            <img src="{{user.photoURL}}"
+                 alt
+                 class="d-block ui-w-30 rounded-circle">
+          </td>
+          <td class="align-middle"><a [routerLink]="[detailsRoute, user.id]">{{user.name}}</a></td>
+          <td class="align-middle">{{user.email}}</td>
+          <td class="align-middle">{{(user.lastLoginTimestamp) ? (user.lastLoginTimestamp | date: 'MM/dd/yy') : 'None'}}</td>
+
+          <td class="align-middle">
+            {{(user.roles['OWL-EMPLOYEE'] || user.roles['OWL-ADMIN']) ? 'Owl' : "Other" }}
+          </td>
+          <td class="align-middle">
+            <span class="badge badge-outline-success"
+                  *ngIf="user.isActive && !user.isPending">Active</span>
+            <span class="badge badge-outline-warning"
+                  *ngIf="user.isPending">Pending</span>
+            <span class="badge badge-outline-default"
+                  *ngIf="!user.isActive && !user.isPending">Disabled</span>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- / Table -->
+
+  <!-- Pagination -->
+  <div class="card-body py-0">
+
+    <div class="row">
+      <div class="col-sm text-sm-left text-center pt-3">
+        <span class="text-muted"
+              *ngIf="totalItems">Page {{ currentPage }} of {{ totalPages }}</span>
+      </div>
+      <div class="col-sm pt-3">
+        <ngb-pagination [collectionSize]="totalItems"
+                        [pageSize]="perPage"
+                        [(page)]="currentPage"
+                        (pageChange)="update()"
+                        size="sm"
+                        class="d-flex justify-content-center justify-content-sm-end m-0"></ngb-pagination>
+      </div>
+    </div>
+
+  </div>
+  <!-- / Pagination -->
+</div>

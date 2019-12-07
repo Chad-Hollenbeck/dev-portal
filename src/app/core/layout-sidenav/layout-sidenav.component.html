@@ -1,0 +1,37 @@
+<sidenav [orientation]="orientation" [ngClass]="getClasses()">
+
+  <!-- Brand demo (see src/demo.css) -->
+  <div class="app-brand brand-md text-center" *ngIf="orientation !== 'horizontal'">
+    <img src="assets/images/owl-logo-white.png" class="app-logo logo-sm d-inline" alt="">
+
+    <!-- <a routerLink="/" class="app-brand-text demo sidenav-text font-weight-normal ml-2">Owl Computing Inc</a> -->
+    <a href="javascript:void(0)" class="layout-sidenav-toggle sidenav-link text-large ml-auto" (click)="toggleSidenav()">
+      <i class="ion ion-md-menu align-middle"></i>
+    </a>
+  </div>
+  <!-- <div class="sidenav-divider mt-n3 mb-0" *ngIf="orientation !== 'horizontal'"></div> -->
+  <sidenav-divider class="mb-1 mt-1 sidenav-divider d-block"></sidenav-divider>
+
+  <!-- Nav Menu -->
+  <div class="sidenav-inner" [ngClass]="{ 'py-1': orientation !== 'horizontal' }">
+
+    <ng-container *ngFor="let item of menu">
+
+      <!-- Divider -->
+      <div *ngIf="item.type == 'divider'" class="sidenav-inner" [ngClass]="{ 'py-1': orientation !== 'horizontal' }"></div>
+
+      <!-- Header -->
+      <sidenav-header *ngIf="item.type == 'header'" class="small font-weight-semibold">{{item.text}}</sidenav-header>
+
+      <!-- Single Nav Link -->
+      <sidenav-router-link *ngIf="item.type === 'route'" icon="{{item.icon}}" route="{{item.uri}}" [active]="isActive(item.activeUriSegment)">{{item.text}}</sidenav-router-link>
+
+      <!-- Submenu -->
+      <sidenav-menu *ngIf="item.type === 'submenu'" icon="{{item.icon}}" text="{{item.text}}" [active]="isMenuActive(item.activeUriSegment)" [open]="isMenuOpen(item.activeUriSegment)">
+        <sidenav-router-link *ngFor="let child of item.childRoutes" route="{{child.uri}}" [active]="isActive(child.activeUriSegment)">{{child.text}}</sidenav-router-link>
+      </sidenav-menu>
+
+
+    </ng-container>
+  </div>
+</sidenav>

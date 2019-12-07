@@ -1,0 +1,50 @@
+<div class="authentication-wrapper authentication-1 px-4">
+  <div class="authentication-inner card py-5">
+
+    <!-- Logo -->
+    <div class="card-header">
+      <div class="d-flex justify-content-center align-items-center p-3">
+
+        <img src="../../../assets/images/owl-logo-full-blue.png"
+             class="img-fluid"
+             alt="OWL LOGO">
+      </div>
+    </div>
+    <!-- / Logo -->
+
+    <!-- Form -->
+    <!-- <form class="my-5">
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input disabled [(ngModel)]="credentials.email" name="email" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label class="form-label d-flex justify-content-between align-items-end">
+          <div>Password</div>
+          <a href="javascript:void(0)" class="d-block small">Forgot password?</a>
+        </label>
+        <input disabled [(ngModel)]="credentials.password" name="password" type="password" class="form-control">
+      </div>
+      <div class="d-flex justify-content-between align-items-center m-0">
+        <label class="custom-control custom-checkbox m-0">
+          <input disabled type="checkbox" class="custom-control-input" name="rememberMe" [(ngModel)]="credentials.rememberMe">
+          <span class="custom-control-label">Remember me</span>
+        </label>
+        <button disabled type="button" class="btn btn-primary">Sign In</button>
+      </div>
+    </form> -->
+    <!-- / Form -->
+
+    <div class="text-center card-body my-5">
+      <div class="">
+        <button (click)="googleLogin()"
+                class="btn btn-google btn-large text-center"><span class="fab fa-google"></span> &nbsp; Login with Google</button>
+      </div>
+    </div>
+
+    <div class="text-center text-muted">
+      Owl Computing Portal
+    </div>
+
+  </div>
+</div>

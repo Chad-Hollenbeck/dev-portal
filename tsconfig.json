@@ -1,0 +1,34 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "target": "es5",
+    "downlevelIteration": true,
+    "module": "es2015",
+    "importHelpers": true,
+    "allowJs": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "paths":{
+      "@environments/*": ["environments/*"],
+      "@assets/*" : ["assets/vendor/*"],
+      "@vendor/*" : ["vendor/*"],
+      "@app/*" : ["app/*"],
+      "@core/*" : ["app/core/*"],
+    }
+  },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "preserveWhitespaces": true
+  }
+}
