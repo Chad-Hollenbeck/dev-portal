@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
-import { UserVM } from './user.class';
+import { UserVM } from '../models/user.class';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { SlimUserVM } from './slim-user.class';
+import { SlimUserVM } from '../models/slim-user.class';
 
 @Injectable({
   providedIn: 'root'

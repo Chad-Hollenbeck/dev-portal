@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AppService } from '@app/app.service';
-import { UserService } from '../user.service';
-import { UserVM, UserPermission } from '../user.class';
+import { UserService } from '../services/user.service';
+import { UserVM, UserPermission } from '../models/user.class';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
-import { UserRateVM } from '../user-rate.class';
-import { UserRateService } from '../user-rate.service';
+import { UserRateVM } from '../models/user-rate.class';
+import { UserRateService } from '../services/user-rate.service';
 import * as _ from 'lodash';
 import * as moment from 'moment';
 import { appRouteNames } from '@app/app.routes.names';

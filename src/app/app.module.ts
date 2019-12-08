@@ -39,7 +39,7 @@ import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { HomeModule } from './+home/_config/home.module';
 import { AuthModule } from './+auth/config/auth.module';
-import { UsersModule } from './+users/_config/users.module';
+import { UsersModule } from './+users/users.module';
 
 
 
