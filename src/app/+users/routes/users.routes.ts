@@ -1,5 +1,5 @@
-import { UsersListComponent } from '../users-list/users-list.component';
-import { UserDetailsComponent } from '../user-details/user-details.component';
+import { UsersListComponent } from '../+users-list/users-list.component';
+import { UserDetailsComponent } from '../+user-details/user-details.component';
 import { userRouteNames } from './users.routes.names';
 
 

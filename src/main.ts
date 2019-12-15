@@ -8,7 +8,7 @@ const options = {
   preserveWhitespaces: false
 };
 
-if (environment.production || environment.staging) {
+if (environment.production) {
   enableProdMode();
 } else {
   options.preserveWhitespaces = true;

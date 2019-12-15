@@ -1,10 +1,10 @@
 import { Component, Input, HostBinding } from '@angular/core';
 import { AppService } from '../../app.service';
 import { LayoutService } from '../layout.service';
-import { AuthService } from '@app/+auth/auth.service';
+import { AuthService } from '@app/+auth/services/auth.service';
 import { Router } from '@angular/router';
 import { appRouteNames } from '@app/app.routes.names';
-import { authRouteNames } from '@app/+auth/config/auth.routes.names';
+import { authRouteNames } from '@app/+auth/routes/auth.routes.names';
 
 @Component({
   selector: 'app-layout-navbar',

@@ -3,7 +3,7 @@ import { Router, Event as RouterEvent, NavigationStart, NavigationEnd, Navigatio
 import { AppService } from './app.service';
 import { LayoutService } from './core/layout.service';
 import * as firebase from 'firebase/app';
-import { AuthService } from './+auth/auth.service';
+import { AuthService } from './+auth/services/auth.service';
 
 @Component({
   selector: 'app-root',

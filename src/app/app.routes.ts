@@ -1,11 +1,11 @@
-import { AUTH_ROUTES } from './+auth/config/auth.routes';
+import { AUTH_ROUTES } from './+auth/routes/auth.routes';
 import { Layout2Component } from './core/layout-2/layout-2.component';
 import { LayoutBlankComponent } from './core/layout-blank/layout-blank.component';
-import { USER_ROUTES } from './+users/_config/users.routes';
-import { HOME_ROUTES } from './+home/_config/home.routes';
+import { USER_ROUTES } from './+users/routes/users.routes';
+import { HOME_ROUTES } from './+home/routes/home.routes';
 import { appRouteNames } from './app.routes.names';
-import { authRouteNames } from './+auth/config/auth.routes.names';
-import { userRouteNames } from './+users/_config/users.routes.names';
+import { authRouteNames } from './+auth/routes/auth.routes.names';
+
 
 const MENU_ITEM_TYPES = {
   HEADER: 'header',

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '@app/app.service';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../services/auth.service';
 import { Subscription } from 'rxjs';
 import UserCredential = firebase.auth.UserCredential;
 
 import { ToastrService } from 'ngx-toastr';
 import * as moment from 'moment';
-import { UserService } from '@app/+users/user.service';
-import { UserVM } from '@app/+users/user.class';
+import { UserService } from '@app/+users/services/user.service';
+import { UserVM } from '@app/+users/models/user.class';
 import { appRouteNames } from '@app/app.routes.names';
 
 @Component({

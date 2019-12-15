@@ -48,12 +48,11 @@
             "styles": [
               "src/styles.scss",
               "src/vendor/libs/ngx-toastr/ngx-toastr.scss",
-              "src/vendor/libs/angular2-ladda/angular2-ladda.scss",
               "src/vendor/libs/ngb-datepicker/ngb-datepicker.scss",
               "src/vendor/libs/ng-select/ng-select.scss",
               "src/vendor/styles/bootstrap.scss",
               "src/vendor/styles/appwork.scss",
-              "src/vendor/styles/theme-corporate.scss",
+              "src/vendor/styles/theme-soft.scss",
               "src/vendor/styles/colors.scss",
               "src/vendor/styles/uikit.scss"
             ],
