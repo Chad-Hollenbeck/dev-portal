@@ -2,5 +2,6 @@
 export const appRouteNames = {
   AUTH: 'auth',
   HOME: '',
-  USERS: 'users'
+  USERS: 'users',
+  PROJECTS: 'projects'
 }

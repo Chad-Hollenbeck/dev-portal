@@ -5,6 +5,7 @@ import { USER_ROUTES } from './+users/routes/users.routes';
 import { HOME_ROUTES } from './+home/routes/home.routes';
 import { appRouteNames } from './app.routes.names';
 import { authRouteNames } from './+auth/routes/auth.routes.names';
+import { Projects_Routes } from './+projects/routes/projects.routes';
 
 
 const MENU_ITEM_TYPES = {
@@ -17,7 +18,7 @@ const MENU_ITEM_TYPES = {
 export const APP_ROUTES = [
   {
     path: '',
-    component: Layout2Component,
+    component: LayoutBlankComponent,
     pathMatch: 'full',
     children: [
       { path: '', children: HOME_ROUTES },
@@ -35,6 +36,13 @@ export const APP_ROUTES = [
     component: Layout2Component,
     children: [
       { path: '', children: USER_ROUTES }
+    ]
+  },
+  {
+    path: appRouteNames.PROJECTS,
+    component: LayoutBlankComponent,
+    children: [
+      { path: '', children: Projects_Routes }
     ]
   },
 ];

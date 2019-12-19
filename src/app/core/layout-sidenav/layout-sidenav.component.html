@@ -2,7 +2,7 @@
 
   <!-- Brand demo (see src/demo.css) -->
   <div class="app-brand brand-md text-center" *ngIf="orientation !== 'horizontal'">
-    <img src="assets/images/owl-logo-white.png" class="app-logo logo-sm d-inline" alt="">
+    <img src="assets/images/img/logo.png" class="app-logo logo-sm d-inline" alt="">
 
     <!-- <a routerLink="/" class="app-brand-text demo sidenav-text font-weight-normal ml-2">Owl Computing Inc</a> -->
     <a href="javascript:void(0)" class="layout-sidenav-toggle sidenav-link text-large ml-auto" (click)="toggleSidenav()">
@@ -30,7 +30,6 @@
       <sidenav-menu *ngIf="item.type === 'submenu'" icon="{{item.icon}}" text="{{item.text}}" [active]="isMenuActive(item.activeUriSegment)" [open]="isMenuOpen(item.activeUriSegment)">
         <sidenav-router-link *ngFor="let child of item.childRoutes" route="{{child.uri}}" [active]="isActive(child.activeUriSegment)">{{child.text}}</sidenav-router-link>
       </sidenav-menu>
-
 
     </ng-container>
   </div>

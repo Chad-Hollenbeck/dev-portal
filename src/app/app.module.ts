@@ -40,6 +40,7 @@ import { APP_ROUTES } from './app.routes';
 import { HomeModule } from './+home/home.module';
 import { AuthModule } from './+auth/auth.module';
 import { UsersModule } from './+users/users.module';
+import { ProjectsModule } from './+projects/projects.module';
 
 
 
@@ -77,6 +78,7 @@ import { UsersModule } from './+users/users.module';
     AuthModule,
     HomeModule,
     UsersModule,
+    ProjectsModule,
 
     // Router
     RouterModule.forRoot(APP_ROUTES)
