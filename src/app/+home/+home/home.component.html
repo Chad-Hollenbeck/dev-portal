@@ -40,13 +40,13 @@
     <div class="ui-bg-overlay bg-dark opacity-25"></div>
     <ul class="nav nav-tabs tabs-alt justify-content-center border-transparent">
       <li class="nav-item">
-        <a class="nav-link text-white py-4 active cursor-pointer" (click)="content=1">Hub</a>
+        <a class="nav-link text-white py-4 cursor-pointer" [ngClass]="{active:content==1}" (click)="content=1">Hub</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-white py-4" href="https://chadmhollenbeck-portfolio.web.app/" target="_blank">Resume</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white py-4 cursor-pointer" (click)="content=2">Portfolio</a>
+        <a class="nav-link text-white py-4 cursor-pointer" [ngClass]="{active:content==2}" (click)="content=2">Portfolio</a>
       </li>
 
     </ul>
