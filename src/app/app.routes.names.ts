@@ -3,5 +3,6 @@ export const appRouteNames = {
   AUTH: 'auth',
   HOME: '',
   USERS: 'users',
-  PROJECTS: 'projects'
+  PROJECTS: 'projects',
+  PROFILE: 'profile'
 }

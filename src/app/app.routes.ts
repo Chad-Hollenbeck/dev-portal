@@ -7,6 +7,7 @@ import { appRouteNames } from './app.routes.names';
 import { authRouteNames } from './+auth/routes/auth.routes.names';
 import { Projects_Routes } from './+projects/routes/projects.routes';
 import { AuthGuard } from './+auth/guards/auth.guard';
+import { PROFILE_ROUTES } from './+profile/routes/profile.routes';
 
 
 const MENU_ITEM_TYPES = {
@@ -16,7 +17,7 @@ const MENU_ITEM_TYPES = {
   SUBMENU: 'submenu'
 }
 
-export const APP_ROUTES = [
+export const APP_ROUTES: any = [
   {
     path: '',
     component: Layout2Component,
@@ -35,7 +36,6 @@ export const APP_ROUTES = [
   {
     path: appRouteNames.USERS,
     component: Layout2Component,
-    canActivate: [AuthGuard],
     children: [
       { path: '', children: USER_ROUTES }
     ]
@@ -47,10 +47,18 @@ export const APP_ROUTES = [
       { path: '', children: Projects_Routes }
     ]
   },
+  {
+    path: appRouteNames.PROFILE,
+    component: Layout2Component,
+    children: [
+      { path: '', children: PROFILE_ROUTES }
+    ]
+  }
 ];
 
 export const APP_MENU = [
   { type: MENU_ITEM_TYPES.HEADER, text: 'NAVIGATION', restricted: true },
+
   // HOME
   { type: MENU_ITEM_TYPES.ROUTE, text: 'Home', uri: '/', icon: 'fas fa-home', activeUriSegment: '/', restricted: false },
 
