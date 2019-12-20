@@ -6,6 +6,7 @@ import { HOME_ROUTES } from './+home/routes/home.routes';
 import { appRouteNames } from './app.routes.names';
 import { authRouteNames } from './+auth/routes/auth.routes.names';
 import { Projects_Routes } from './+projects/routes/projects.routes';
+import { AuthGuard } from './+auth/guards/auth.guard';
 
 
 const MENU_ITEM_TYPES = {
@@ -18,7 +19,7 @@ const MENU_ITEM_TYPES = {
 export const APP_ROUTES = [
   {
     path: '',
-    component: LayoutBlankComponent,
+    component: Layout2Component,
     pathMatch: 'full',
     children: [
       { path: '', children: HOME_ROUTES },
@@ -34,13 +35,14 @@ export const APP_ROUTES = [
   {
     path: appRouteNames.USERS,
     component: Layout2Component,
+    canActivate: [AuthGuard],
     children: [
       { path: '', children: USER_ROUTES }
     ]
   },
   {
     path: appRouteNames.PROJECTS,
-    component: LayoutBlankComponent,
+    component: Layout2Component,
     children: [
       { path: '', children: Projects_Routes }
     ]
@@ -48,10 +50,10 @@ export const APP_ROUTES = [
 ];
 
 export const APP_MENU = [
-  { type: MENU_ITEM_TYPES.HEADER, text: 'NAVIGATION' },
+  { type: MENU_ITEM_TYPES.HEADER, text: 'NAVIGATION', restricted: true },
   // HOME
-  { type: MENU_ITEM_TYPES.ROUTE, text: 'Home', uri: '/', icon: 'fas fa-home', activeUriSegment: '/' },
+  { type: MENU_ITEM_TYPES.ROUTE, text: 'Home', uri: '/', icon: 'fas fa-home', activeUriSegment: '/', restricted: false },
 
   // USERS
-  { type: MENU_ITEM_TYPES.ROUTE, text: 'Users', icon: 'fas fa-user', uri: appRouteNames.USERS, activeUriSegment: appRouteNames.USERS }
+  { type: MENU_ITEM_TYPES.ROUTE, text: 'Users', icon: 'fas fa-user', uri: appRouteNames.USERS, activeUriSegment: appRouteNames.USERS, restricted: true}
 ]

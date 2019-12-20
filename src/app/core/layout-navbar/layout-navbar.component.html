@@ -30,7 +30,7 @@
       </label> -->
     </div>
 
-    <div class="navbar-nav align-items-lg-center ml-auto">
+    <div class="navbar-nav align-items-lg-center ml-auto" *ngIf="!!currentUser">
 
       <div ngbDropdown [placement]="isRTL ? 'bottom-left' : 'bottom-right'" class="demo-navbar-user nav-item">
         <a ngbDropdownToggle class="nav-link" href="javascript:void(0)">
