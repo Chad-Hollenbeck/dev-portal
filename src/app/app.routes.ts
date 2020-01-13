@@ -6,7 +6,6 @@ import { HOME_ROUTES } from './+home/routes/home.routes';
 import { appRouteNames } from './app.routes.names';
 import { authRouteNames } from './+auth/routes/auth.routes.names';
 import { Projects_Routes } from './+projects/routes/projects.routes';
-import { AuthGuard } from './+auth/guards/auth.guard';
 import { PROFILE_ROUTES } from './+profile/routes/profile.routes';
 
 
