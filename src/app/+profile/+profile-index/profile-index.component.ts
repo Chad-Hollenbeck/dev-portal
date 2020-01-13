@@ -1,6 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AppService } from '@app/app.service';
 import { Subscription } from 'rxjs';
+import { UserService } from '@app/+users/services/user.service';
+import { UserVM } from '@app/+users/models/user.class';
+import { AuthService } from '@app/+auth/services/auth.service';
 
 @Component({
   selector: 'app-profile-index',
@@ -13,8 +16,10 @@ export class ProfileIndexComponent implements OnInit, OnDestroy {
 
   subs: Subscription;
 
-  constructor(private appService: AppService) {
-    this.appService.pageTitle = 'Sample Page Title';
+  user: any;
+
+  constructor(private appService: AppService, private authService: AuthService) {
+    this.appService.pageTitle = 'Profile';
 
     this.subs = new Subscription();
   }
@@ -23,6 +28,7 @@ export class ProfileIndexComponent implements OnInit, OnDestroy {
     this.loading = true;
 
     // Load Data
+    this.user = this.authService.getUser();
   }
 
   ngOnDestroy(){

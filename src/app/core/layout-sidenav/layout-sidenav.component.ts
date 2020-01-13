@@ -2,7 +2,7 @@ import { Component, Input, AfterViewInit, HostBinding } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppService } from '../../app.service';
 import { LayoutService } from '../layout.service';
-import { APP_MENU } from '@app/app.routes';
+import { APP_MENU } from '@app/app.menu';
 import { AuthService } from '@app/+auth/services/auth.service';
 import * as _ from 'lodash';
 

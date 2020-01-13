@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AppService } from '@app/app.service';
 import { Subscription } from 'rxjs';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-project-list',
@@ -87,6 +88,8 @@ export class ProjectListComponent implements OnInit, OnDestroy {
     this.appService.pageTitle = 'Sample Page Title';
 
     this.subs = new Subscription();
+
+    this.projectsData = _.sortBy(this.projectsData, 'title');
   }
 
   ngOnInit() {
