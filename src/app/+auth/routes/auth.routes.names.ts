@@ -1,4 +1,6 @@
 
 export const authRouteNames = {
-  LOGIN: 'login'
+  LOGIN: 'login',
+  LOGOUT: 'logout',
+
 }
