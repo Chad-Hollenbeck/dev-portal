@@ -1,11 +1,14 @@
 export class ProjectVM {
   id: string;
-  isActive: boolean;
-  createDate: string;
+  title: string;
+  tasks: number;
+  completedTasks: number;
+  shortDescription: string;
+  created: string;
+  deadline: string;
+  status: string;
 
   constructor(){
     this.id = null;
-    this.isActive = true;
-    this.createDate = new Date().toISOString();
   }
 }

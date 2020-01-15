@@ -2,6 +2,7 @@ import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import { UserRecord } from 'firebase-functions/lib/providers/auth';
 
+
 // Initialize App
 admin.initializeApp();
 
@@ -16,4 +17,18 @@ export const ValidateNewUser = functions.auth.user().onCreate(async (user: UserR
   }
 
   return null;
+});
+
+export const GithubSync = functions.https.onRequest( (req, resp) => {
+
+  const data = req.body;
+
+  const repoData: any = {
+    id: data.id,
+    name: data.name,
+    url: data.url,
+    description: data.description
+  };
+
+  resp.status(200).send();
 });

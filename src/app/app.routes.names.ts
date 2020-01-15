@@ -4,5 +4,5 @@ export const appRouteNames = {
   HOME: '',
   USERS: 'users',
   PROJECTS: 'projects',
-  PROFILE: 'profile'
+  PROFILE: ''
 }

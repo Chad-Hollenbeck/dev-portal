@@ -16,6 +16,8 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
 
   @Input() project : ProjectVM;
 
+  isRTL = false;
+
   constructor(private appService: AppService) {
     this.appService.pageTitle = 'Project list - Pages';
   }
