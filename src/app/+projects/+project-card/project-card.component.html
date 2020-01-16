@@ -2,9 +2,9 @@
 
   <div class="card-body d-flex justify-content-between align-items-start pb-3">
     <div>
-      <a href="javascript:void(0)" class="text-body text-big font-weight-semibold">{{project.title}}</a>
+      <a href="{{project.html_url}}" class="text-body text-big font-weight-semibold">{{project.name}}</a>
       <span class="badge align-text-bottom ml-1" [ngClass]="'badge-' + statuses[project.status].color">{{statuses[project.status].title}}</span>
-      <div class="text-muted small mt-1">{{project.tasks - project.completedTasks}} opened tasks, {{project.completedTasks}} tasks completed</div>
+      <div class="text-muted small mt-1">{{project.description}}</div>
     </div>
 
     <div class="btn-group" ngbDropdown [placement]="!isRTL ? 'bottom-right' : 'bottom-left'">
@@ -15,33 +15,29 @@
     </div>
   </div>
 
-  <ngb-progressbar [value]="completedPercent(project.tasks, project.completedTasks)" height="3px"></ngb-progressbar>
+  <ngb-progressbar [value]="completedPercent(project.openIssues, 10)" height="3px"></ngb-progressbar>
   <div class="card-body small pt-2 pb-0">
-    <strong>{{completedPercent(project.tasks, project.completedTasks)}}%</strong> completed
+    <strong>{{project.openIssues}}</strong> open issues
   </div>
+<div class="card-body pb-3">
+  <!-- {{project.description}} -->
+</div>
 
-  <div class="card-body pb-3">
-    {{project.shortDescription}}
-  </div>
 
   <div class="card-body pt-0">
     <div class="row">
       <div class="col">
         <div class="text-muted small">Created</div>
-        <div class="font-weight-bold">{{project.created}}</div>
+        <div class="font-weight-bold">{{project.createDate | date}}</div>
       </div>
       <div class="col">
-        <div class="text-muted small">Deadline</div>
-        <div class="font-weight-bold">{{project.deadline}}</div>
+        <div class="text-muted small">Updated</div>
+        <div class="font-weight-bold">{{project.updateDate | date}}</div>
+      </div>
+      <div class="col">
+        <div class="text-muted small">Language</div>
+        <div class="font-weight-bold">{{project.language}}</div>
       </div>
     </div>
   </div>
-  <hr class="m-0">
-  <div class="card-body py-3">
-    <div class="text-muted small mb-2">Team</div>
-    <div class="d-flex flex-wrap">
-      <!-- <a *ngFor="let member of project.team" href="javascript:void(0)" class="d-block mr-1 mb-1"><img [src]="'assets/img/avatars/' + member.avatar" alt="" class="ui-w-30 rounded-circle"></a> -->
-    </div>
-  </div>
-
 </div>

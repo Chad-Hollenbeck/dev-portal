@@ -1,9 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AppService } from '@app/app.service';
 import { Subscription } from 'rxjs';
-import { UserService } from '@app/+users/services/user.service';
-import { UserVM } from '@app/+users/models/user.class';
 import { AuthService } from '@app/+auth/services/auth.service';
+import { ProjectService } from '@app/+projects/services/project.firestore.service';
 
 @Component({
   selector: 'app-profile-index',
@@ -17,8 +16,9 @@ export class ProfileIndexComponent implements OnInit, OnDestroy {
   subs: Subscription;
 
   user: any;
+  projectCount: number;
 
-  constructor(private appService: AppService, private authService: AuthService) {
+  constructor(private appService: AppService, private authService: AuthService, private projectService: ProjectService) {
     this.appService.pageTitle = 'Profile';
 
     this.subs = new Subscription();
@@ -29,6 +29,11 @@ export class ProfileIndexComponent implements OnInit, OnDestroy {
 
     // Load Data
     this.user = this.authService.getUser();
+    this.projectService.projectCount.subscribe(
+      (count) => {
+        this.projectCount = count;
+      }
+    );
   }
 
   ngOnDestroy(){

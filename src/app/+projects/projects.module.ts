@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { ProjectCardComponent } from './+project-card/project-card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectListComponent } from './+project-list/project-list.component';
+import { ProjectService } from './services/project.firestore.service';
 
 @NgModule({
   declarations: [ProjectCardComponent,
@@ -19,6 +20,6 @@ import { ProjectListComponent } from './+project-list/project-list.component';
     ProjectListComponent,
     ProjectCardComponent
   ],
-  providers: []
+  providers: [ProjectService]
 })
 export class ProjectsModule { }

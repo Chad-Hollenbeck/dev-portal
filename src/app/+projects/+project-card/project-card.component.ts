@@ -14,7 +14,7 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
 
   subs: Subscription;
 
-  @Input() project : ProjectVM;
+  @Input() project: ProjectVM;
 
   isRTL = false;
 
@@ -27,8 +27,8 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
     2: { title: 'Pending', color: 'warning' }
   };
 
-  completedPercent(tasks, completed) {
-    return Math.round((completed / tasks) * 100);
+  completedPercent(tasks: number, completed: number) {
+    return 100 - Math.round((tasks / completed) * 100);
   }
 
   ngOnInit() {
