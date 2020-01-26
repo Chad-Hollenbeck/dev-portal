@@ -1,0 +1,13 @@
+<h3 class="d-flex flex-wrap justify-content-between align-items-center font-weight-bold pt-2 mb-4">
+  <ng-content></ng-content>
+</h3>
+<ol class="breadcrumb mb-4 mt-n3"
+    *ngIf="breadcrumbs && breadcrumbs.length > 1">
+  <li class="breadcrumb-item"
+      *ngFor="let link of breadcrumbs; let index = i;"
+      [ngClass]="{active: link.isLast}">
+    <a *ngIf="!link.isLast"
+       [routerLink]="[link.url]">{{link.name}}</a>
+    <span *ngIf="link.isLast">{{link.name}}</span>
+  </li>
+</ol>

@@ -33,6 +33,7 @@ export class LayoutSidenavComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.toggleSidenav();
     // Safari bugfix
     this.layoutService._redrawLayoutSidenav();
   }

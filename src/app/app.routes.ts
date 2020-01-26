@@ -6,6 +6,7 @@ import { appRouteNames } from './app.routes.names';
 import { authRouteNames } from './+auth/routes/auth.routes.names';
 import { Projects_Routes } from './+projects/routes/projects.routes';
 import { PROFILE_ROUTES } from './+profile/routes/profile.routes';
+import { TOOLS_ROUTES } from './+tools/routes/tools.routes';
 
 
 
@@ -34,17 +35,17 @@ export const APP_ROUTES: any = [
     ]
   },
   {
-    path: appRouteNames.PROJECTS,
-    component: Layout2Component,
-    children: [
-      { path: '', children: Projects_Routes }
-    ]
-  },
-  {
     path: appRouteNames.PROFILE,
     component: Layout2Component,
     children: [
       { path: '', children: PROFILE_ROUTES }
+    ]
+  },
+  {
+    path: appRouteNames.TOOLS,
+    component: Layout2Component,
+    children: [
+      { path: '', children: TOOLS_ROUTES }
     ]
   }
 ];
