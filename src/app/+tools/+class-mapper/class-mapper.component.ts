@@ -16,7 +16,8 @@ export class ClassMapperComponent implements OnInit, OnDestroy {
 
   subs: Subscription;
 
-  languages: string[];
+  sourceLanguages: string[];
+  destinationLanguages: string[];
 
   fromLanguage: string;
   toLanguage: string;
@@ -29,7 +30,13 @@ export class ClassMapperComponent implements OnInit, OnDestroy {
 
     this.subs = new Subscription();
 
-    this.languages = ['C#', 'Typescript']
+    const languages = ['C#', 'Typescript'];
+
+    this.sourceLanguages = [languages[0]];
+    this.destinationLanguages = [languages[1]];
+
+    this.fromLanguage = languages[0]
+    this.toLanguage = languages[1]
   }
 
   ngOnInit() {
@@ -42,7 +49,7 @@ export class ClassMapperComponent implements OnInit, OnDestroy {
     let parsedCode = null;
 
     switch (this.fromLanguage) {
-      case this.languages[0]:
+      case this.sourceLanguages[0]:
         sourceConfig = this.parseSourceCSharp(sourceLines);
         break;
       default:
@@ -51,7 +58,7 @@ export class ClassMapperComponent implements OnInit, OnDestroy {
     }
 
     switch (this.toLanguage) {
-      case this.languages[0]:
+      case this.destinationLanguages[0]:
         this.convertedCode = this.exportSourceCSharp(sourceConfig);
         break;
       default:
@@ -80,9 +87,9 @@ export class ClassMapperComponent implements OnInit, OnDestroy {
   }
 
   private parseCSharpLine(line: string): ClassAttributeVM | string {
-    if(line.indexOf('class')){
+    if(line.indexOf('class') > -1){
       // We found the class name
-      return line.replace(' ', '').split('class')[1];
+      return line.replace(' ', '').split('class')[1].split(':')[0].trim();
     }
 
     if(line.indexOf('public') > -1 || line.indexOf('private') > -1){
@@ -118,11 +125,11 @@ export class ClassMapperComponent implements OnInit, OnDestroy {
     }
 
     if (newType === null) {
-      newType = t+'VM';
+      newType = type;
     }
 
     if(isArray){
-      return newType + '[]';
+      newType = newType.split('<')[1].split('>')[0] + '[]';
     }
 
     return newType;
@@ -138,16 +145,18 @@ return null;
   }
 
   private exportSourceTypescript(config: ClassConfigVM): string{
-    let results = 'export class ' + config.className + 'VM {\n';
+    let results = 'export class ' + config.className + '{\n';
     let constructor = 'constructor() {\n';
+    const space = '  ';
+    const dblSpace = space + space;
 
     // Append attributes
     _.each(config.attributes, (attr) => {
-      results += attr.name + ' : ' + attr.type + ';\n';
-      constructor += 'this.' + attr.name + '= null;';
+      results += space + attr.name + ' : ' + attr.type + ';\n';
+      constructor += dblSpace + 'this.' + attr.name + '= null;\n';
     });
 
-    results += '\n' + constructor + '} \n }'; // constructor and closing brackets
+    results += '\n' + space + constructor + space + '}\n}'; // constructor and closing brackets
 
     return results;
   }
