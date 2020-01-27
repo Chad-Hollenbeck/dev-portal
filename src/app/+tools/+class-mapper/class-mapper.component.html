@@ -59,6 +59,7 @@
         <button class="btn btn-default"
                 ngxClipboard
                 [cbContent]="convertedCode"
+                (cbOnSuccess)="comfirmCopy()"
                 [disabled]="!convertedCode">Copy</button>
       </div>
     </div>

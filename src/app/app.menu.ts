@@ -16,7 +16,7 @@ export const APP_MENU = [
   { type: MENU_ITEM_TYPES.ROUTE, text: 'Profile', uri: appRouteNames.PROFILE, icon: 'fas fa-user-tie', activeUriSegment: '', restricted: false },
 
   { type: MENU_ITEM_TYPES.HEADER, text: 'TOOLS', restricted: false },
-      { type: MENU_ITEM_TYPES.ROUTE, text: 'Class Mapper', uri: appRouteNames.TOOLS + '/' + TOOLS_ROUTE_NAMES.CLASS_MAPPER, icon: 'fas fa-hourglass-half', activeUriSegment: appRouteNames.TOOLS, restricted: false },
+      { type: MENU_ITEM_TYPES.ROUTE, text: 'Class Mapper', uri: appRouteNames.TOOLS + '/' + TOOLS_ROUTE_NAMES.CLASS_MAPPER, icon: 'fas fa-file-code', activeUriSegment: appRouteNames.TOOLS, restricted: false },
 
 
   { type: MENU_ITEM_TYPES.HEADER, text: 'ADMIN', restricted: true },

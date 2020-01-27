@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { ClassConfigVM } from '../models/class-config.model';
 import * as _ from 'lodash';
 import { ClassAttributeVM } from '../models/class-attribute.model';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-class-mapper',
@@ -25,7 +26,7 @@ export class ClassMapperComponent implements OnInit, OnDestroy {
   sourceCode: string;
   convertedCode: string;
 
-  constructor(private appService: AppService) {
+  constructor(private appService: AppService, private toastr: ToastrService) {
     this.appService.pageTitle = 'Class Mapper';
 
     this.subs = new Subscription();
@@ -59,12 +60,16 @@ export class ClassMapperComponent implements OnInit, OnDestroy {
 
     switch (this.toLanguage) {
       case this.destinationLanguages[0]:
-        this.convertedCode = this.exportSourceCSharp(sourceConfig);
-        break;
-      default:
       this.convertedCode = this.exportSourceTypescript(sourceConfig);
         break;
+      default:
+      this.convertedCode = this.exportSourceCSharp(sourceConfig);
+        break;
     }
+  }
+
+  confirmCopy(){
+    this.toastr.success("Code Copied to Clipboard");
   }
 
   private parseSourceCSharp(lines: string[]): ClassConfigVM {
