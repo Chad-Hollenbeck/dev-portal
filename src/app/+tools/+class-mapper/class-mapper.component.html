@@ -57,7 +57,9 @@
       </div>
       <div class="card-footer text-right">
         <button class="btn btn-default"
-                [disabled]="!convertedClass">Copy</button>
+                ngxClipboard
+                [cbContent]="convertedCode"
+                [disabled]="!convertedCode">Copy</button>
       </div>
     </div>
   </div>
