@@ -60,7 +60,7 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (!this.subs.closed) {
+    if (this.subs && !this.subs.closed) {
       this.subs.unsubscribe();
     }
   }

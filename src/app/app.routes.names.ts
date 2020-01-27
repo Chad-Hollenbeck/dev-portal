@@ -4,5 +4,6 @@ export const appRouteNames = {
   HOME: '',
   USERS: 'users',
   PROJECTS: 'projects',
-  PROFILE: ''
+  PROFILE: '',
+  TOOLS: 'tools'
 }

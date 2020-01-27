@@ -22,8 +22,6 @@ import { environment } from '@environments/environment';
 import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { LayoutModule } from './core/layout.module';
-import { SpinnerService } from './core/spinners/spinner.service';
-import { LoadingSpinnerComponent } from './core/spinners/loading-spinner/loading-spinner.component';
 // *******************************************************************************
 // Firebase
 
@@ -42,6 +40,7 @@ import { AuthModule } from './+auth/auth.module';
 import { UsersModule } from './+users/users.module';
 import { ProjectsModule } from './+projects/projects.module';
 import { ProfileModule } from './+profile/profile.module';
+import { ToolsModule } from './+tools/tools.module';
 
 
 // *******************************************************************************
@@ -50,8 +49,7 @@ import { ProfileModule } from './+profile/profile.module';
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent,
-    LoadingSpinnerComponent
+    NotFoundComponent
   ],
 
   imports: [
@@ -79,6 +77,7 @@ import { ProfileModule } from './+profile/profile.module';
     UsersModule,
     ProjectsModule,
     ProfileModule,
+    ToolsModule,
 
     // Router
     RouterModule.forRoot(APP_ROUTES)
@@ -87,7 +86,6 @@ import { ProfileModule } from './+profile/profile.module';
   providers: [
     Title,
     AppService,
-    SpinnerService,
     {provide: NgbDateParserFormatter, useClass: NgbDateFRParserFormatter}
   ],
 
