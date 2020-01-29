@@ -1,5 +1,5 @@
 {
-  "name": "appwork-angular-starter",
+  "name": "chollenbeck-dev-portal",
   "version": "1.4.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,11 @@
     "build:prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
+
+    "docs": "compodoc -p src/tsconfig.app.json -d docs",
+
     "slim:pkg": "npm uninstall marked ng2-charts masonry-layout ng2-archwizard ng2-charts ng2-colorpicker ngx-color-picker ng2-completer ng2-img-cropper plyr quill shepherd.js sortablejs sweetalert2 ngx-trend @swimlane/ngx-charts @sweetalert2/ngx-sweetalert2 hammerjs highlight.js ngx-markdown-editor ngx-swiper-wrapper ngx-image-gallery ngx-sortablejs ngx-textarea-autosize angular-calendar date-fns ng2-dragula ng-chartist chartist chart.js ngx-contextmenu angular-2-dropdown-multiselect angular2-ladda intl ng2-file-upload ng2-password-strength-bar ng2-smart-table ngx-color-picker ngx-dropzone-wrapper spinkit",
+
     "ngc:install": "npm i --save-dev ./schematics/schematics-ngc-2.0.0.tgz",
     "ngc:module": "ng g @schematics/ngc:ngc-module",
     "ngc:module:routes": "ng g @schematics/ngc:ngc-routes",
@@ -74,6 +78,7 @@
     "@types/node": "~8.9.4",
     "@types/numeral": "~0.0.22",
     "codelyzer": "^5.0.0",
+    "compodoc": "0.0.41",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
