@@ -11,6 +11,19 @@
   },
   "exclude": [
     "test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "./app/core/**/*.js",
+    "./app/core/**/*.ts",
+    "./app/core/**/*.css",
+    "./app/core/**/*.html",
+    "./app/core/**/*.scss",
+    "./vendor/**/*.scss",
+    "./vendor/**/*.ts",
+    "./vendor/**/*.js",
+    "./vendor/**/*.html",
+    "./environments/*.ts",
+    "./assets/**/*.png",
+    "./assets/**/*.jpg",
+    "./assets/**/*.css"
   ]
 }

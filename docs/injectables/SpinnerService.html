@@ -8,662 +8,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	    <link rel="stylesheet" href="../styles/style.css">
+	      <link rel="stylesheet" href="../styles/style.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="../" class="navbar-brand">chollenbeck-dev-portal documentation</a>
-            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-            <div id="book-search-input" role="search">
-                <input type="text" placeholder="Type to search">
-            </div>
-            <nav>
-            
-                <ul class="list">
-            
-                    <li class="title">
-                        <a href="../">chollenbeck-dev-portal documentation</a>
-                    </li>
-            
-                    <li class="divider"></li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
-                        <ul class="links">
-                                <li class="link">
-                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
-                                </li>
-                                <li class="link">
-                                    <a 
-                                        
-                                         href="../overview.html" 
-                                         href="../overview.html" 
-                                        >
-                                        <span class="fa fa-th"></span>Overview
-                                    </a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="./modules.html" >
-                            <span class="fa fa-archive"></span>
-                            <span>Modules</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-modules-links"
-                            ></span>
-                        </a>
-                        <ul class="links collapse in"
-                                id="xs-modules-links"
-                            >
-                                <li class="link">
-                                    <a href="../modules/AppModule.html" >AppModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/AuthModule.html" >AuthModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/HomeModule.html" >HomeModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/HoverDropdownModule.html" >HoverDropdownModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/LayoutModule.html" >LayoutModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/MegaDropdownModule.html" >MegaDropdownModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/ProfileModule.html" >ProfileModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/ProjectsModule.html" >ProjectsModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/SharedModule.html" >SharedModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/SidenavModule.html" >SidenavModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/ThemeSettingsModule.html" >ThemeSettingsModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/ToolsModule.html" >ToolsModule</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../modules/UsersModule.html" >UsersModule</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple">
-                            <span class="fa fa-cogs"></span>
-                            <span>Components</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-components-links"
-                                ></span>
-                        </div>
-                        <ul class="links collapse in"
-                                id="xs-components-links"
-                            >
-                                <li class="link">
-                                    <a href="../components/AppComponent.html" >AppComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/ClassMapperComponent.html" >ClassMapperComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/HomeComponent.html" >HomeComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/Layout2Component.html" >Layout2Component</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/LayoutBlankComponent.html" >LayoutBlankComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/LayoutFooterComponent.html" >LayoutFooterComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/LayoutHorizontalSidenavComponent.html" >LayoutHorizontalSidenavComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/LayoutNavbarComponent.html" >LayoutNavbarComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/LayoutSidenavComponent.html" >LayoutSidenavComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/LoadingSpinnerComponent.html" >LoadingSpinnerComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/LoginComponent.html" >LoginComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/LogoutComponent.html" >LogoutComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/NotFoundComponent.html" >NotFoundComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/PageHeaderComponent.html" >PageHeaderComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/ProfileIndexComponent.html" >ProfileIndexComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/ProjectCardComponent.html" >ProjectCardComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/ProjectListComponent.html" >ProjectListComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/SidenavBlockComponent.html" >SidenavBlockComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/SidenavComponent.html" >SidenavComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/SidenavDividerComponent.html" >SidenavDividerComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/SidenavHeaderComponent.html" >SidenavHeaderComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/SidenavLinkComponent.html" >SidenavLinkComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/SidenavMenuComponent.html" >SidenavMenuComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/SidenavRouterLinkComponent.html" >SidenavRouterLinkComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/UserDetailsComponent.html" >UserDetailsComponent</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../components/UsersListComponent.html" >UsersListComponent</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple">
-                            <span class="fa fa-code"></span>
-                            <span>Directives</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-directives-links"
-                                ></span>
-                        </div>
-                        <ul class="links collapse in"
-                                id="xs-directives-links"
-                            >
-                                <li class="link">
-                                    <a href="../directives/HoverDropdownDirective.html" >HoverDropdownDirective</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../directives/MegaDropdownDirective.html" >MegaDropdownDirective</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple">
-                            <span class="fa fa-file-code-o"></span>
-                            <span>Classes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-classes-links"
-                                ></span>
-                        </div>
-                        <ul class="links collapse in"
-                                id="xs-classes-links"
-                            >
-                                <li class="link">
-                                    <a href="../classes/BreadcrumbVM.html" >BreadcrumbVM</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/ClassAttributeVM.html" >ClassAttributeVM</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/ClassConfigVM.html" >ClassConfigVM</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/ProjectVM.html" >ProjectVM</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/SlimUserVM.html" >SlimUserVM</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/UserPermission.html" >UserPermission</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/UserRateVM.html" >UserRateVM</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/UserVM.html" >UserVM</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <div class="simple">
-                            <span class="fa fa-long-arrow-down"></span>
-                            <span>Injectables</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-injectables-links"
-                                ></span>
-                        </div>
-                        <ul class="links collapse in"
-                                id="xs-injectables-links"
-                            >
-                                <li class="link">
-                                    <a href="../injectables/AppService.html" >AppService</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/AuthGuard.html" >AuthGuard</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/AuthService.html" >AuthService</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/LayoutService.html" >LayoutService</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/NgbDateFRParserFormatter.html" >NgbDateFRParserFormatter</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/ProjectService.html" >ProjectService</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/SpinnerService.html"  class="active" >SpinnerService</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/ThemeSettingsService.html" >ThemeSettingsService</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/UserRateService.html" >UserRateService</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/UserService.html" >UserService</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                    <li class="chapter">
-                        <div class="simple">
-                            <span class="fa fa-info"></span>
-                            <span>Interfaces</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-interfaces-links"
-                                ></span>
-                        </div>
-                        <ul class="links collapse in"
-                                id="xs-interfaces-links"
-                            >
-                                <li class="link">
-                                    <a href="../interfaces/ThemeSettingsOptions.html" >ThemeSettingsOptions</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../interfaces/ThemeSettingsTheme.html" >ThemeSettingsTheme</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
-                    </li>
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
-                    </li>
-            
-                    <li class="divider"></li>
-                    <li class="copyright">
-                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
-                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
-                            </a>
-                    </li>
-            
-                </ul>
-            
-            </nav>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <nav>
-                   
-                       <ul class="list">
-                   
-                           <li class="title">
-                               <a href="../">chollenbeck-dev-portal documentation</a>
-                           </li>
-                   
-                           <li class="divider"></li>
-                   
-                               <div id="book-search-input" role="search">
-                                   <input type="text" placeholder="Type to search">
-                               </div>
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
-                               <ul class="links">
-                                       <li class="link">
-                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
-                                       </li>
-                                       <li class="link">
-                                           <a 
-                                               
-                                                href="../overview.html" 
-                                                href="../overview.html" 
-                                               >
-                                               <span class="fa fa-th"></span>Overview
-                                           </a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="./modules.html" >
-                                   <span class="fa fa-archive"></span>
-                                   <span>Modules</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#modules-links"
-                                   ></span>
-                               </a>
-                               <ul class="links collapse in"
-                                       id="modules-links"
-                   >
-                                       <li class="link">
-                                           <a href="../modules/AppModule.html" >AppModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/AuthModule.html" >AuthModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/HomeModule.html" >HomeModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/HoverDropdownModule.html" >HoverDropdownModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/LayoutModule.html" >LayoutModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/MegaDropdownModule.html" >MegaDropdownModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/ProfileModule.html" >ProfileModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/ProjectsModule.html" >ProjectsModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/SharedModule.html" >SharedModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/SidenavModule.html" >SidenavModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/ThemeSettingsModule.html" >ThemeSettingsModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/ToolsModule.html" >ToolsModule</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../modules/UsersModule.html" >UsersModule</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple">
-                                   <span class="fa fa-cogs"></span>
-                                   <span>Components</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#components-links"
-                   ></span>
-                               </div>
-                               <ul class="links collapse in"
-                                       id="components-links"
-                   >
-                                       <li class="link">
-                                           <a href="../components/AppComponent.html" >AppComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/ClassMapperComponent.html" >ClassMapperComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/HomeComponent.html" >HomeComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/Layout2Component.html" >Layout2Component</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/LayoutBlankComponent.html" >LayoutBlankComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/LayoutFooterComponent.html" >LayoutFooterComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/LayoutHorizontalSidenavComponent.html" >LayoutHorizontalSidenavComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/LayoutNavbarComponent.html" >LayoutNavbarComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/LayoutSidenavComponent.html" >LayoutSidenavComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/LoadingSpinnerComponent.html" >LoadingSpinnerComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/LoginComponent.html" >LoginComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/LogoutComponent.html" >LogoutComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/NotFoundComponent.html" >NotFoundComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/PageHeaderComponent.html" >PageHeaderComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/ProfileIndexComponent.html" >ProfileIndexComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/ProjectCardComponent.html" >ProjectCardComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/ProjectListComponent.html" >ProjectListComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/SidenavBlockComponent.html" >SidenavBlockComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/SidenavComponent.html" >SidenavComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/SidenavDividerComponent.html" >SidenavDividerComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/SidenavHeaderComponent.html" >SidenavHeaderComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/SidenavLinkComponent.html" >SidenavLinkComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/SidenavMenuComponent.html" >SidenavMenuComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/SidenavRouterLinkComponent.html" >SidenavRouterLinkComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/UserDetailsComponent.html" >UserDetailsComponent</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../components/UsersListComponent.html" >UsersListComponent</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple">
-                                   <span class="fa fa-code"></span>
-                                   <span>Directives</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#directives-links"
-                   ></span>
-                               </div>
-                               <ul class="links collapse in"
-                                       id="directives-links"
-                   >
-                                       <li class="link">
-                                           <a href="../directives/HoverDropdownDirective.html" >HoverDropdownDirective</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../directives/MegaDropdownDirective.html" >MegaDropdownDirective</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple">
-                                   <span class="fa fa-file-code-o"></span>
-                                   <span>Classes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#classes-links"
-                   ></span>
-                               </div>
-                               <ul class="links collapse in"
-                                       id="classes-links"
-                   >
-                                       <li class="link">
-                                           <a href="../classes/BreadcrumbVM.html" >BreadcrumbVM</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/ClassAttributeVM.html" >ClassAttributeVM</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/ClassConfigVM.html" >ClassConfigVM</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/ProjectVM.html" >ProjectVM</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/SlimUserVM.html" >SlimUserVM</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/UserPermission.html" >UserPermission</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/UserRateVM.html" >UserRateVM</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/UserVM.html" >UserVM</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <div class="simple">
-                                   <span class="fa fa-long-arrow-down"></span>
-                                   <span>Injectables</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#injectables-links"
-                   ></span>
-                               </div>
-                               <ul class="links collapse in"
-                                       id="injectables-links"
-                   >
-                                       <li class="link">
-                                           <a href="../injectables/AppService.html" >AppService</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/AuthGuard.html" >AuthGuard</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/AuthService.html" >AuthService</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/LayoutService.html" >LayoutService</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/NgbDateFRParserFormatter.html" >NgbDateFRParserFormatter</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/ProjectService.html" >ProjectService</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/SpinnerService.html"  class="active" >SpinnerService</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/ThemeSettingsService.html" >ThemeSettingsService</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/UserRateService.html" >UserRateService</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/UserService.html" >UserService</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                           <li class="chapter">
-                               <div class="simple">
-                                   <span class="fa fa-info"></span>
-                                   <span>Interfaces</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#interfaces-links"
-                   ></span>
-                               </div>
-                               <ul class="links collapse in"
-                                       id="interfaces-links"
-                   >
-                                       <li class="link">
-                                           <a href="../interfaces/ThemeSettingsOptions.html" >ThemeSettingsOptions</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/ThemeSettingsTheme.html" >ThemeSettingsTheme</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
-                           </li>
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
-                           </li>
-                   
-                           <li class="divider"></li>
-                           <li class="copyright">
-                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
-                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
-                                   </a>
-                           </li>
-                   
-                       </ul>
-                   
-                   </nav>
+                   <compodoc-menu mode="normal"></compodoc-menu>
                </div>
+               <!-- START CONTENT -->
                <div class="content injectable">
                    <div class="content-data">
+
+
+
 
 
 
@@ -674,16 +42,16 @@
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
-    </li>
-    <li>
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
-    </li>
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="infos">
+    <div class="tab-pane fade active in" id="c-info">
         <p class="comment">
             <h3>File</h3>
         </p>
@@ -693,247 +61,688 @@
 
 
 
-            <section>
-                <h3 id="methods">Methods</h3>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b> _register</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            <code>_register(spinner: LoadingSpinnerComponent)</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b> _unregister</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            <code>_unregister(spinnerToRemove: LoadingSpinnerComponent)</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b> show</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            <code>show(spinnerId: string)</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b> hide</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            <code>hide(spinnerId: string)</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b> showGroup</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            <code>showGroup(spinnerGroup: string)</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b> hideGroup</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            <code>hideGroup(spinnerGroup: string)</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b> showAll</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            <code>showAll()</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b> hideAll</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            <code>hideAll()</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b> isShowing</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            <code>isShowing(spinnerId: string)</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>boolean</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-            </section>
 
             <section>
-                <h3 id="inputs">Properties</h3>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier">Private</span> spinnerCache</b>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>spinnerCache:     <code>any</code>
-            </bcode>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-            </section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#spinnerCache">spinnerCache</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_register">_register</a>
+                            </li>
+                            <li>
+                                <a href="#_unregister">_unregister</a>
+                            </li>
+                            <li>
+                                <a href="#hide">hide</a>
+                            </li>
+                            <li>
+                                <a href="#hideAll">hideAll</a>
+                            </li>
+                            <li>
+                                <a href="#hideGroup">hideGroup</a>
+                            </li>
+                            <li>
+                                <a href="#isShowing">isShowing</a>
+                            </li>
+                            <li>
+                                <a href="#show">show</a>
+                            </li>
+                            <li>
+                                <a href="#showAll">showAll</a>
+                            </li>
+                            <li>
+                                <a href="#showGroup">showGroup</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_register"></a>
+                    <span class="name">
+                        <b>
+                            _register
+                        </b>
+                        <a href="#_register"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>_register(spinner: <a href="../components/LoadingSpinnerComponent.html">LoadingSpinnerComponent</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="9"
+                            class="link-to-prism">src/app/shared/spinners/spinner.service.ts:9</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>spinner</td>
+                                    <td>
+                                                <code><a href="../components/LoadingSpinnerComponent.html" target="_self" >LoadingSpinnerComponent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_unregister"></a>
+                    <span class="name">
+                        <b>
+                            _unregister
+                        </b>
+                        <a href="#_unregister"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>_unregister(spinnerToRemove: <a href="../components/LoadingSpinnerComponent.html">LoadingSpinnerComponent</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/app/shared/spinners/spinner.service.ts:13</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>spinnerToRemove</td>
+                                    <td>
+                                                <code><a href="../components/LoadingSpinnerComponent.html" target="_self" >LoadingSpinnerComponent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hide"></a>
+                    <span class="name">
+                        <b>
+                            hide
+                        </b>
+                        <a href="#hide"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hide(spinnerId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/shared/spinners/spinner.service.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>spinnerId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hideAll"></a>
+                    <span class="name">
+                        <b>
+                            hideAll
+                        </b>
+                        <a href="#hideAll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hideAll()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/shared/spinners/spinner.service.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hideGroup"></a>
+                    <span class="name">
+                        <b>
+                            hideGroup
+                        </b>
+                        <a href="#hideGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hideGroup(spinnerGroup?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/shared/spinners/spinner.service.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>spinnerGroup</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isShowing"></a>
+                    <span class="name">
+                        <b>
+                            isShowing
+                        </b>
+                        <a href="#isShowing"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isShowing(spinnerId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/shared/spinners/spinner.service.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>spinnerId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>boolean | undefined</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="show"></a>
+                    <span class="name">
+                        <b>
+                            show
+                        </b>
+                        <a href="#show"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>show(spinnerId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="21"
+                            class="link-to-prism">src/app/shared/spinners/spinner.service.ts:21</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>spinnerId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showAll"></a>
+                    <span class="name">
+                        <b>
+                            showAll
+                        </b>
+                        <a href="#showAll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showAll()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/shared/spinners/spinner.service.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showGroup"></a>
+                    <span class="name">
+                        <b>
+                            showGroup
+                        </b>
+                        <a href="#showGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showGroup(spinnerGroup?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/shared/spinners/spinner.service.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>spinnerGroup</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="spinnerCache"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            spinnerCache</b>
+                            <a href="#spinnerCache"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Set&lt;LoadingSpinnerComponent&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/shared/spinners/spinner.service.ts:7</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
     </div>
-    <div class="tab-pane fade tab-source-code" id="source">
-        <pre><code class="hljs javascript">import { Injectable } from &#x27;@angular/core&#x27;;
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { LoadingSpinnerComponent } from &#x27;./loading-spinner/loading-spinner.component&#x27;;
 
 @Injectable({providedIn: &#x27;root&#x27;})
@@ -1007,6 +816,7 @@ export class SpinnerService {
 }
 </code></pre>
     </div>
+
 </div>
 
 
@@ -1015,9 +825,14 @@ export class SpinnerService {
 
 
 
+                   
+
+
+
+
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1025,8 +840,22 @@ export class SpinnerService {
     </div>
 </div>
 </div>
+               <!-- END CONTENT -->
            </div>
        </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SpinnerService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
@@ -1037,20 +866,17 @@ export class SpinnerService {
 
        <script src="../js/compodoc.js"></script>
 
-       <script src="../js/search/search.js"></script>
-       <script src="../js/search/lunr.min.js"></script>
-       <script src="../js/search/search-lunr.js"></script>
-
+       <script src="../js/tabs.js"></script>
        <script src="../js/menu.js"></script>
-       <script src="../js/libs/highlight.pack.js"></script>
-       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
-       <script src="../js/search/search_index.js"></script>
-       <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                hljs.initHighlightingOnLoad();
-                hljs.initLineNumbersOnLoad();
-            });
-       </script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
 
     </body>
 </html>

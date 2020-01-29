@@ -22,21 +22,17 @@
 <text text-anchor="start" x="429.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_AuthModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="37,-70 37,-195 459,-195 459,-70 37,-70"/>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="105,-70 105,-195 391,-195 391,-70 105,-70"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_AuthModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="181,-78 181,-130 451,-130 451,-78 181,-78"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_AuthModule_imports</title>
-<polygon fill="none" stroke="#000000" points="45,-78 45,-130 173,-130 173,-78 45,-78"/>
+<polygon fill="none" stroke="#000000" points="113,-78 113,-130 383,-130 383,-78 113,-78"/>
 </g>
 <!-- LoginComponent -->
 <g id="node1" class="node">
 <title>LoginComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="443.2758,-122 328.7242,-122 328.7242,-86 443.2758,-86 443.2758,-122"/>
-<text text-anchor="middle" x="386" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="375.2758,-122 260.7242,-122 260.7242,-86 375.2758,-86 375.2758,-122"/>
+<text text-anchor="middle" x="318" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoginComponent</text>
 </g>
 <!-- AuthModule -->
 <g id="node3" class="node">
@@ -47,32 +43,20 @@
 <!-- LoginComponent&#45;&gt;AuthModule -->
 <g id="edge1" class="edge">
 <title>LoginComponent&#45;&gt;AuthModule</title>
-<path fill="none" stroke="#000000" d="M386,-122.1061C386,-141.3391 386,-169 386,-169 386,-169 303.7799,-169 303.7799,-169"/>
-<polygon fill="#000000" stroke="#000000" points="303.7799,-165.5001 293.7799,-169 303.7798,-172.5001 303.7799,-165.5001"/>
+<path fill="none" stroke="#000000" d="M277.1929,-122.1061C277.1929,-122.1061 277.1929,-140.991 277.1929,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="273.6929,-140.9909 277.1929,-150.991 280.6929,-140.991 273.6929,-140.9909"/>
 </g>
 <!-- LogoutComponent -->
 <g id="node2" class="node">
 <title>LogoutComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="310.7758,-122 189.2242,-122 189.2242,-86 310.7758,-86 310.7758,-122"/>
-<text text-anchor="middle" x="250" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LogoutComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="242.7758,-122 121.2242,-122 121.2242,-86 242.7758,-86 242.7758,-122"/>
+<text text-anchor="middle" x="182" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LogoutComponent</text>
 </g>
 <!-- LogoutComponent&#45;&gt;AuthModule -->
 <g id="edge2" class="edge">
 <title>LogoutComponent&#45;&gt;AuthModule</title>
-<path fill="none" stroke="#000000" d="M250,-122.1061C250,-122.1061 250,-140.991 250,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="246.5001,-140.9909 250,-150.991 253.5001,-140.991 246.5001,-140.9909"/>
-</g>
-<!-- CommonModule -->
-<g id="node4" class="node">
-<title>CommonModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="164.6681,-122 161.6681,-126 140.6681,-126 137.6681,-122 53.3319,-122 53.3319,-86 164.6681,-86 164.6681,-122"/>
-<text text-anchor="middle" x="109" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">CommonModule</text>
-</g>
-<!-- CommonModule&#45;&gt;AuthModule -->
-<g id="edge3" class="edge">
-<title>CommonModule&#45;&gt;AuthModule</title>
-<path fill="none" stroke="#000000" d="M109,-122.1061C109,-141.3391 109,-169 109,-169 109,-169 196.1596,-169 196.1596,-169"/>
-<polygon fill="#000000" stroke="#000000" points="196.1597,-172.5001 206.1596,-169 196.1596,-165.5001 196.1597,-172.5001"/>
+<path fill="none" stroke="#000000" d="M224.5572,-122.1061C224.5572,-122.1061 224.5572,-140.991 224.5572,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="221.0572,-140.9909 224.5572,-150.991 228.0572,-140.991 221.0572,-140.9909"/>
 </g>
 </g>
 </svg>
