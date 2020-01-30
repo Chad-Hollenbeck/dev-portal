@@ -71,11 +71,12 @@ export class AppService {
   buildFormGroup(object: any, patchVal?: any): FormGroup {
     const controls = {};
 
-    for (let key of Object.keys(object)) {
+    for (const key of Object.keys(object)) {
       if (Array.isArray(object[key])) {
         controls[key] = new FormArray([]);
-      } else
+      } else {
         controls[key] = new FormControl(null, null);
+      }
     }
 
     const group = new FormGroup(controls);
@@ -87,13 +88,13 @@ export class AppService {
   convertDateToNgbDate(d: Moment) {
     return {
       year: d.get('y'),
-      month: d.get('M') +1,
+      month: d.get('M') + 1,
       day: d.get('D')
-    }
+    };
   }
 
-  convertNgbDateToIsoDate(d: NgbDateStruct){
-    const date = new Date(d.year, d.month -1, d.day);
+  convertNgbDateToIsoDate(d: NgbDateStruct) {
+    const date = new Date(d.year, d.month - 1, d.day);
     return date.toISOString().split('T')[0];
   }
 }

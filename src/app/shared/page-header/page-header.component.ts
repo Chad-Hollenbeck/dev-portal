@@ -19,17 +19,15 @@ export class PageHeaderComponent implements OnInit {
     this.breadcrumbs = [];
     let sumParts = '';
     const parts = this.router.url.split('?')[0].split('/');
-    for (let i = 0; i < parts.length; i++) {
-
-      const segment = parts[i];
+    for (const segment of parts) {
 
       // If the part is valid, add it to breadcrumb items
-      if (segment && segment != '') {
+      if (segment && segment !== '') {
         // Update the running total
         sumParts += '/' + segment;
 
         const name = segment.substr(0, 1).toUpperCase() + segment.substr(1);
-        this.breadcrumbs.push({ name: name, url: sumParts, isLast: false });
+        this.breadcrumbs.push({ name, url: sumParts, isLast: false });
       }
     }
 
