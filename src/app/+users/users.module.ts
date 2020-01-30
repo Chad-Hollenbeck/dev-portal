@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { UserDetailsComponent } from './+user-details/user-details.component';
-import { UsersListComponent } from './+users-list/users-list.component';
-import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
-  declarations: [UsersListComponent, UserDetailsComponent],
+  declarations: [UserDetailsComponent],
   imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule,
+    SharedModule, FormsModule,
     ReactiveFormsModule,
     NgbModule
   ],

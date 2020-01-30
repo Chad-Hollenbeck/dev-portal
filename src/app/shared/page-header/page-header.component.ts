@@ -13,7 +13,7 @@ export class PageHeaderComponent implements OnInit {
 
   constructor(private router: Router) {
     this.breadcrumbs = [];
-   }
+  }
 
   ngOnInit() {
     this.breadcrumbs = [];
@@ -34,7 +34,9 @@ export class PageHeaderComponent implements OnInit {
     }
 
     // Set last to active
-    this.breadcrumbs[this.breadcrumbs.length -1].isLast = true;
+    if (this.breadcrumbs.length > 0) {
+      this.breadcrumbs[this.breadcrumbs.length - 1].isLast = true;
+    }
   }
 
 }

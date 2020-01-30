@@ -2,7 +2,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//Libs
+// Libs
 import { ToastrModule } from 'ngx-toastr';
 import { NgSelectModule } from '@ng-select/ng-select';
 
@@ -37,11 +37,6 @@ import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { HomeModule } from './+home/home.module';
 import { AuthModule } from './+auth/auth.module';
-import { UsersModule } from './+users/users.module';
-import { ProjectsModule } from './+projects/projects.module';
-import { ProfileModule } from './+profile/profile.module';
-import { ToolsModule } from './+tools/tools.module';
-
 
 // *******************************************************************************
 //
@@ -74,10 +69,6 @@ import { ToolsModule } from './+tools/tools.module';
     // Feature Modules
     AuthModule,
     HomeModule,
-    UsersModule,
-    ProjectsModule,
-    ProfileModule,
-    ToolsModule,
 
     // Router
     RouterModule.forRoot(APP_ROUTES)

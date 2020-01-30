@@ -14,6 +14,6 @@ import { PageHeaderComponent } from './page-header/page-header.component';
     CommonModule,
     RouterModule
   ],
-  exports: [LoadingSpinnerComponent, PageHeaderComponent]
+  exports: [LoadingSpinnerComponent, PageHeaderComponent, CommonModule, RouterModule]
 })
 export class SharedModule { }
